@@ -1,3 +1,5 @@
+# Bill Splitter
+
 A bill splitter web application built in Flask
 
 This application creates a web form to enter the bill total, number
