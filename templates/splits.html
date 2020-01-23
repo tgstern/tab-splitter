@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h1>Splits</h1>
+<table class="table">
+    {% for i in range(splits) %}
+        <tr>
+          <th>Split {{ i + 1 }}</th>
+          <td>{{ splitdict[i] | usd }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<h1>Final Bill</h1>
+<table class="table">
+    <tr>
+        <th>Tip Amount</th>
+        <td>{{ tip | usd }}</td>
+    </tr>
+    <tr>
+        <th>Bill Total</th>
+        <td>{{ total | usd }}</td>
+    </tr>
+</table>
+
+{% endblock %}

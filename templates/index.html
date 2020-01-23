@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Enter Values</h1>
+    <br>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form method="post">
+
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="total" placeholder="Bill Total">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="splits" placeholder="Number of Splits">
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="tip" placeholder="Tip Percentage">
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn" type="submit">Calculate</button>
+
+    </form>
+
+    <script>
+
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector("input[name='total']").value) {
+                alert('Please enter total bill amount');
+                return false;
+            }
+            if (!document.querySelector("input[name='splits']").value) {
+                alert('Enter number of splits');
+                return false;
+            }
+            if (!document.querySelector("input[name='tip']").value) {
+                alert('Please enter a tip amount');
+                return false;
+            }
+            return true;
+        };
+
+    </script>
+
+{% endblock %}

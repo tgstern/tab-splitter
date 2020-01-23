@@ -1,0 +1,11 @@
+body {
+    background-color: #dcfeea;
+    color: #477b03;
+}
+nav, .a, .btn {
+    background-color: #477b03;
+    color: #dcfeea;
+}
+.table {
+    background-color: white;
+}
